@@ -12,4 +12,9 @@ public class Componente {
         
     }
 
+    public Componente get(char c) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }

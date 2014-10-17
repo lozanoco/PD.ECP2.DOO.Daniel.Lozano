@@ -2,7 +2,7 @@ package text;
 
 public class FactoriaCaracter {
 
-    public static Object getFactoria() {
+    public static Componente getFactoria() {
         // TODO Auto-generated method stub
         return null;
     }
