@@ -1,13 +1,12 @@
 package calculator;
 
-public class ComandoImprimir implements Comando {
+public class ComandoImprimir extends ComandoAbs {
     
     private static String IMPRIMIR="imprimir";
-    private Calculadora calc;
 
     public ComandoImprimir(Calculadora calc) {
         // TODO Auto-generated constructor stub
-        this.calc=calc;
+        super(calc);
     }
 
     public void execute() {

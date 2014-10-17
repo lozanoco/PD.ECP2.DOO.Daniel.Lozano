@@ -2,14 +2,13 @@ package calculator;
 
 import upm.jbb.IO;
 
-public class ComandoIniciar implements Comando {
+public class ComandoIniciar extends ComandoAbs {
     
     private static String C="c";
-    private Calculadora calc;
 
     public ComandoIniciar(Calculadora calc) {
         // TODO Auto-generated constructor stub
-        this.calc=calc;
+        super(calc);
     }
 
     public void execute() {

@@ -2,19 +2,18 @@ package calculator;
 
 import upm.jbb.IO;
 
-public class ComandoSumar implements Comando {
+public class ComandoSumar extends ComandoAbs {
     
     private static String SUMAR="sumar";
-    private Calculadora calc;
 
     public ComandoSumar(Calculadora calc) {
         // TODO Auto-generated constructor stub
-        this.calc=calc;
+        super(calc);
     }
 
     public void execute() {
         // TODO Auto-generated method stub
-        calc.sumar(IO.in.readInt("Introducca la cantidad a sumar: "));
+        super.calc.sumar(IO.in.readInt("Introduzca la cantidad a sumar: "));
     }
 
     @Override

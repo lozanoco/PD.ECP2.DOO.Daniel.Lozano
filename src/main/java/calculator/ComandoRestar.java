@@ -2,19 +2,18 @@ package calculator;
 
 import upm.jbb.IO;
 
-public class ComandoRestar implements Comando {
+public class ComandoRestar extends ComandoAbs {
     
     private static String RESTAR="restar";
-    private Calculadora calc;
 
     public ComandoRestar(Calculadora calc) {
         // TODO Auto-generated constructor stub
-        this.calc=calc;
+        super(calc);
     }
 
     public void execute() {
         // TODO Auto-generated method stub
-        calc.restar(IO.in.readInt("Introducca la cantidad a restar: "));
+        super.calc.restar(IO.in.readInt("Introduzca la cantidad a restar: "));
     }
 
     @Override
