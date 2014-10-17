@@ -3,7 +3,6 @@ package calculator;
 import java.util.HashMap;
 import java.util.Map;
 
-import es.upm.miw.pd.command.calculator.solution.Comando;
 
 public class GestorComandos {
     private Map<String, Comando> comandos = new HashMap<>();

@@ -1,9 +1,5 @@
 package calculator;
 
-import es.upm.miw.pd.command.calculator.solution.ComandoImprimir;
-import es.upm.miw.pd.command.calculator.solution.ComandoIniciar;
-import es.upm.miw.pd.command.calculator.solution.ComandoRestar;
-import es.upm.miw.pd.command.calculator.solution.ComandoSumar;
 import upm.jbb.IO;
 
 public class MainCalculadora {
