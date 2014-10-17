@@ -1,7 +1,5 @@
 package calculator;
 
-import upm.jbb.IO;
-
 public class ComandoIniciar extends ComandoAbs {
     
     private static String C="c";
@@ -13,6 +11,7 @@ public class ComandoIniciar extends ComandoAbs {
 
     public void execute() {
         // TODO Auto-generated method stub
+       super.calc.iniciar();
     }
 
     @Override

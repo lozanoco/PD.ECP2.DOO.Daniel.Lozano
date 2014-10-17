@@ -1,5 +1,7 @@
 package calculator;
 
+import upm.jbb.IO;
+
 public class ComandoImprimir extends ComandoAbs {
     
     private static String IMPRIMIR="imprimir";
@@ -11,7 +13,7 @@ public class ComandoImprimir extends ComandoAbs {
 
     public void execute() {
         // TODO Auto-generated method stub
-        //******** vER COMO IMPLEMENTAR LA SALIDA
+        IO.out.println(calc.getTotal());
     }
 
     @Override

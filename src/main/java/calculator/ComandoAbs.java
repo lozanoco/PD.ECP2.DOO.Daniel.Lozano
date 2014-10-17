@@ -5,7 +5,9 @@ public abstract  class ComandoAbs implements Comando {
     protected Calculadora calc;
     
     protected ComandoAbs(Calculadora calc) {
-        // TODO Auto-generated constructor stub
         this.calc=calc;
     }
+    public abstract void execute();
+
+    public abstract String name();
 }
