@@ -8,7 +8,7 @@ public class Conexion {
     public Conexion(Link link) {
         assert link != null;
         this.link = link;
-        this.estado = Estado.CERRADO;
+        this.estado = new Cerrado();
     }
 
     public Link getLink() {
@@ -20,51 +20,19 @@ public class Conexion {
     }
 
     public void abrir() {
-        if (this.estado == Estado.CERRADO) {
-            this.estado = Estado.PREPARADO;
-        } else if (this.estado == Estado.PARADO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else if (this.estado == Estado.PREPARADO) {
-        } else if (this.estado == Estado.ESPERANDO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else
-            assert false : "estado imposible";
+        estado.abrir(this);
     }
 
     public void cerrar() {
-        if (this.estado == Estado.CERRADO) {
-        } else if (this.estado == Estado.PARADO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else if (this.estado == Estado.PREPARADO) {
-            this.estado = Estado.CERRADO;
-        } else if (this.estado == Estado.ESPERANDO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        }
-        assert false : "estado imposible";
+    	estado.cerrar(this);
     }
 
     public void parar() {
-        if (this.estado == Estado.CERRADO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else if (this.estado == Estado.PARADO) {
-        } else if (this.estado == Estado.PREPARADO) {
-            this.estado = Estado.PARADO;
-        } else if (this.estado == Estado.ESPERANDO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        }
-        assert false : "estado imposible";
+    	estado.parar(this);
     }
 
     public void iniciar() {
-        if (this.estado == Estado.CERRADO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else if (this.estado == Estado.PARADO) {
-            this.estado = Estado.PREPARADO;
-        } else if (this.estado == Estado.PREPARADO) {
-        } else if (this.estado == Estado.ESPERANDO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        }
-        assert false : "estado imposible";
+    	estado.iniciar(this);
     }
 
     public void enviar(String msg) {
