@@ -1,5 +1,6 @@
 package text;
 
-public class Texto extends Componente {
+public class Texto extends Estructura {
+
 
 }

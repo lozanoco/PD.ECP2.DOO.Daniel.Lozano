@@ -1,5 +1,5 @@
 package text;
 
-public class Parrafo extends Componente {
+public class Parrafo extends Estructura {
 
 }
