@@ -1,10 +1,15 @@
 package factoryMethod.naturalNumber;
 
-public class NaturalNumber {
-
-	public NaturalNumber getValue() {
-		// TODO Auto-generated method stub
-		return null;
+public abstract class NaturalNumber {
+	
+	private static final int LIMITE = 6;
+	private int value;
+	
+	public int getValue() {
+		return value;
+	}
+	public void setValue(int value) {
+		this.value = value;
 	}
 
 }

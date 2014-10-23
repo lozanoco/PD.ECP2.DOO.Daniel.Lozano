@@ -10,5 +10,8 @@ public abstract class FactoryNumber {
     public void createNaturalNumber(){
     	this.number = creator.createNaturalNumber(number.getValue());
     }
+    public NaturalNumber getNaturalNumber(){
+    	return this.number;
+    }
 
 }
