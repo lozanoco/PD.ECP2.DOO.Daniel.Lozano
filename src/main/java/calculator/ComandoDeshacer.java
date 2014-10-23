@@ -1,5 +1,5 @@
 package calculator;
 
-public class ComandoDeshacer {
+public class ComandoDeshacer extends ComandoMementable{
 
 }

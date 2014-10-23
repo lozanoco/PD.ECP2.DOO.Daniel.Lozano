@@ -1,5 +1,5 @@
 package calculator;
 
-public class ComandoGuardar {
+public class ComandoGuardar extends ComandoMementable{
 
 }
