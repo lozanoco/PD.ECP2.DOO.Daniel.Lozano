@@ -2,32 +2,28 @@ package singelton.factory;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
 import org.junit.Test;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
+
 
 public class FactoryReferencesTest {
-    private FactoryReferences factory;
 
-    @Before
-    public void before() {
-        factory = new FactoryReferences();
-        factory.getReference("cero");
+    @Test
+    public void testFactoryReferencesIsSingleton() {
+        assertSame(FactoryReferences.getFactory(), FactoryReferences.getFactory());
     }
 
     @Test
-    public void testGetReferenceNew() {
-        assertEquals(1, factory.getReference("uno"));
+    public void testFactoryReferencesSingletonNotNull() {
+        assertNotNull(FactoryReferences.getFactory());
     }
 
     @Test
-    public void testGetReference() {
-        assertEquals(0, factory.getReference("cero"));
+    public void testFactoryReferences() {
+        assertEquals(0, FactoryReferences.getFactory().getReference("cero"));
+        assertEquals(1, FactoryReferences.getFactory().getReference("uno"));
+        FactoryReferences.getFactory().removeReference("cero");
+        assertEquals(2, FactoryReferences.getFactory().getReference("cero"));
     }
-    
-    @Test
-    public void testRemoveReference() {
-        factory.removeReference("cero");
-        assertEquals(1, factory.getReference("cero"));
-    }
-
 }
