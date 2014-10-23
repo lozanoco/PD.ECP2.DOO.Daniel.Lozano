@@ -8,12 +8,12 @@ public class CalculadoraMementable extends Calculadora {
 		super();
 	}	
 	
-	@Override
+
 	public Memento createMemento() {
 		return new Memento(this.getTotal());
 	}
 
-	@Override
+
 	public void restoreMemento(Memento memento) {
 		this.setTotal(memento.getMemento());
 		
