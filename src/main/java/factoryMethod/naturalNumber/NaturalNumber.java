@@ -5,6 +5,9 @@ public abstract class NaturalNumber {
 	private static final int LIMITE = 6;
 	private int value;
 	
+	public NaturalNumber(int value) {
+		this.value =value;
+	}
 	public int getValue() {
 		return value;
 	}
