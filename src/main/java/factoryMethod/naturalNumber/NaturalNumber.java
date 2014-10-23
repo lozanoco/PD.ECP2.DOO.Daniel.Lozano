@@ -14,5 +14,12 @@ public abstract class NaturalNumber {
 	public void setValue(int value) {
 		this.value = value;
 	}
-
+	public String getValorTexto(){
+		if (this.value < LIMITE) {
+            return obtenerValorTexto(this.value);
+        } else {
+            return "???";
+        }
+	}	
+	public abstract String obtenerValorTexto(int value);
 }

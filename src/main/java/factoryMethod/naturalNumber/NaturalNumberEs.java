@@ -7,8 +7,8 @@ public class NaturalNumberEs extends NaturalNumber{
     public NaturalNumberEs(int value) {
         super(value);
     }
-
-    public String getTextValue(int numero) {
+    @Override
+    public String obtenerValorTexto(int numero) {
             return NaturalNumberEs.textValue[numero];
     }
 
