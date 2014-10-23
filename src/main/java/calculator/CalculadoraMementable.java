@@ -9,12 +9,12 @@ public class CalculadoraMementable extends Calculadora {
 	}	
 	
 	@Override
-	public MementoCalculadora createMemento() {
-		return new MementoCalculadora(this.getTotal());
+	public Memento createMemento() {
+		return new Memento(this.getTotal());
 	}
 
 	@Override
-	public void restoreMemento(MementoCalculadora memento) {
+	public void restoreMemento(Memento memento) {
 		this.setTotal(memento.getMemento());
 		
 	}

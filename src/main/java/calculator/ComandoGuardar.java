@@ -5,7 +5,7 @@ import upm.jbb.IO;
 public class ComandoGuardar extends ComandoMementable{
 
 	public ComandoGuardar(CalculadoraMementable calculadora,
-			GestorMementos<MementoCalculadora> gm) {
+			GestorMementos<Memento> gm) {
 		super(calculadora, gm);
 		// TODO Auto-generated constructor stub
 	}

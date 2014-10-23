@@ -5,7 +5,7 @@ import upm.jbb.IO;
 public class ComandoDeshacer extends ComandoMementable{
 
 	public ComandoDeshacer(CalculadoraMementable calculadora,
-			GestorMementos<MementoCalculadora> gm) {
+			GestorMementos<Memento> gm) {
 		super(calculadora, gm);
 	}
 
@@ -13,7 +13,7 @@ public class ComandoDeshacer extends ComandoMementable{
 	public void execute() {
 		String[] puntosGuardados = this.getGestorMementos().keys();
 		if(puntosGuardados.length > 0){
-			MementoCalculadora memento = this.getGestorMementos().getMemento(String.valueOf(IO.in.select(puntosGuardados, "selecciona punto guardado")));
+			Memento memento = this.getGestorMementos().getMemento(String.valueOf(IO.in.select(puntosGuardados, "selecciona punto guardado")));
 			this.getCalculadoraMementable().restoreMemento(memento);
 		}else{
 			IO.out.println("No hay puntos guardados");

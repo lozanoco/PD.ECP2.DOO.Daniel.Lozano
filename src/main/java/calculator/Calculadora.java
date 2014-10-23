@@ -27,13 +27,14 @@ public class Calculadora {
         this.setTotal(0);
     }
 
-	public void restoreMemento(MementoCalculadora memento) {
+	public void restoreMemento(Memento memento) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public MementoCalculadora createMemento() {
+	public Memento createMemento() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 }

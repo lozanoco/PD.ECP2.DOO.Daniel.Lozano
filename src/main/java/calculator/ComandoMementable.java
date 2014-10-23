@@ -4,9 +4,9 @@ public abstract class ComandoMementable extends ComandoAbs{
 	
 	private CalculadoraMementable calcMementable;
 
-	private GestorMementos<MementoCalculadora> gestorMementos;
+	private GestorMementos<Memento> gestorMementos;
 	
-	public ComandoMementable(CalculadoraMementable calculadora, GestorMementos<MementoCalculadora> gestorMementos) {
+	public ComandoMementable(CalculadoraMementable calculadora, GestorMementos<Memento> gestorMementos) {
 		super(calculadora);
 		this.calcMementable = calculadora;
 		this.gestorMementos = gestorMementos;
@@ -16,7 +16,7 @@ public abstract class ComandoMementable extends ComandoAbs{
 		return calcMementable;
 	}
 	
-	public GestorMementos<MementoCalculadora> getGestorMementos(){
+	public GestorMementos<Memento> getGestorMementos(){
 		return this.gestorMementos;
 	}
 }
