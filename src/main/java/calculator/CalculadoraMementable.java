@@ -6,5 +6,4 @@ public class CalculadoraMementable extends Calculadora {
     public CalculadoraMementable() {
         super();
     }
-
 }
