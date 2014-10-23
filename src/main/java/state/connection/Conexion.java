@@ -36,11 +36,11 @@ public class Conexion {
 	}
 
 	public void enviar(String msg) {
-		estado.enviar(msg, this);    
+		estado.enviar(msg, link, this);    
 	}
 
 	public void recibir(int respuesta) {
-		estado.recibir(respuesta,link, this);
+		estado.recibir(respuesta, this);
 	}
 
 	public void setEstado(Estado estado) {

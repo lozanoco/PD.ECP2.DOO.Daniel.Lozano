@@ -3,45 +3,37 @@ package state.connection;
 public class Preparado extends Estado{
 
 	@Override
-	public void abrir(Conexion conexion) {
-		// TODO Auto-generated method stub
-		
+	public void abrir(Conexion conexion) {		
 	}
 
 	@Override
 	public void cerrar(Conexion conexion) {
-		// TODO Auto-generated method stub
-		
+		conexion.setEstado(new Cerrado());
 	}
 
 	@Override
 	public void parar(Conexion conexion) {
-		// TODO Auto-generated method stub
-		
+		conexion.setEstado(new Parado());
 	}
 
 	@Override
 	public void iniciar(Conexion conexion) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
-	public void enviar(String msg, Conexion conexion) {
-		// TODO Auto-generated method stub
-		
+	public void enviar(String msg,Link link, Conexion conexion) {
+		link.enviar(msg);
+        conexion.setEstado(new Esperando());
 	}
 
 	@Override
-	public void recibir(int respuesta, Link link, Conexion conexion) {
-		// TODO Auto-generated method stub
-		
+	public void recibir(int respuesta,Conexion conexion) {
+		throw new UnsupportedOperationException("Acción no permitida... ");
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return "PREPARADO";
 	}
 
 }
