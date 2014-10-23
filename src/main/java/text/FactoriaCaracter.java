@@ -2,9 +2,13 @@ package text;
 
 public class FactoriaCaracter {
 
-    public static Componente getFactoria() {
-        // TODO Auto-generated method stub
-        return null;
+    private static FactoriaCaracter factoriaCaracteres;
+
+	public static FactoriaCaracter getFactoria() {
+    	if(FactoriaCaracter.factoriaCaracteres == null){
+    		FactoriaCaracter.factoriaCaracteres = new FactoriaCaracter();
+    	}
+    	return FactoriaCaracter.factoriaCaracteres;
     }
 
 }
