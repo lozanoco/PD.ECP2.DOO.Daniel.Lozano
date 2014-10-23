@@ -36,34 +36,11 @@ public class Conexion {
     }
 
     public void enviar(String msg) {
-        if (this.estado == Estado.CERRADO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else if (this.estado == Estado.PARADO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else if (this.estado == Estado.PREPARADO) {
-            this.link.enviar(msg);
-            this.estado = Estado.ESPERANDO;
-        } else if (this.estado == Estado.ESPERANDO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
+        estado.enviar(msg, this);    
         }
-        assert false : "estado imposible";
-    }
 
     public void recibir(int respuesta) {
-        if (this.estado == Estado.CERRADO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else if (this.estado == Estado.PARADO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else if (this.estado == Estado.PREPARADO) {
-            throw new UnsupportedOperationException("Acción no permitida... ");
-        } else if (this.estado == Estado.ESPERANDO) {
-            if (respuesta == 0) {
-                this.estado = Estado.PREPARADO;
-            } else {
-                this.estado = Estado.CERRADO;
-            }
-        }
-        assert false : "estado imposible";
+       estado.recibir(respuesta,link, this);
     }
 
 }
