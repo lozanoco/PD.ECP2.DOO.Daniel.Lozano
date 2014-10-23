@@ -1,23 +1,23 @@
 package calculator;
 
+import upm.jbb.IO;
+
 public class ComandoGuardar extends ComandoMementable{
 
 	public ComandoGuardar(CalculadoraMementable calculadora,
-			GestorMementos<MementoCalculadora> gestorMementos) {
-		super(calculadora, gestorMementos);
+			GestorMementos<MementoCalculadora> gm) {
+		super(calculadora, gm);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
-		
+		this.getGestorMementos().addMemento(IO.in.readString("Introduce nombre de punto de guardado"), this.getCalculadoraMementable().createMemento());
 	}
 
 	@Override
 	public String name() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Guardar";
 	}
 
 }

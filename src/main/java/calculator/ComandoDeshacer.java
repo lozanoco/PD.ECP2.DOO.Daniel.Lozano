@@ -1,23 +1,29 @@
 package calculator;
 
+import upm.jbb.IO;
+
 public class ComandoDeshacer extends ComandoMementable{
 
 	public ComandoDeshacer(CalculadoraMementable calculadora,
-			GestorMementos<MementoCalculadora> gestorMementos) {
-		super(calculadora, gestorMementos);
-		// TODO Auto-generated constructor stub
+			GestorMementos<MementoCalculadora> gm) {
+		super(calculadora, gm);
 	}
 
 	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
-		
+		String[] puntosGuardados = this.getGestorMementos().keys();
+		if(puntosGuardados.length > 0){
+			MementoCalculadora memento = this.getGestorMementos().getMemento(String.valueOf(IO.in.select(puntosGuardados, "selecciona punto guardado")));
+			this.getCalculadoraMementable().restoreMemento(memento);
+		}else{
+			IO.out.println("No hay puntos guardados");
+		}
+
 	}
 
 	@Override
-	public String name() {
-		// TODO Auto-generated method stub
-		return null;
+	public String name() {		
+		return "Deshacer";
 	}
 
 }
