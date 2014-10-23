@@ -2,8 +2,18 @@ package composite.expresion;
 
 public class Multiplicar extends Operacion {
 
-	public Multiplicar(Expresion exp1, Numero numero) {
-		// TODO Auto-generated constructor stub
+	public Multiplicar(Expresion exp1, Expresion exp2) {
+		super(exp1,exp2);
+	}
+
+	@Override
+	public int operar() {
+		return getExpresion1().operar()*getExpresion2().operar();
+	}
+
+	@Override
+	public String toString() {
+		return "("+getExpresion1()+" * "+getExpresion2()+")";
 	}
 
 }
