@@ -2,8 +2,7 @@ package calculator;
 
 public interface Comando {
 
-    public String name();
-
-    void execute();
+	public void execute();
+	public String name();
 
 }

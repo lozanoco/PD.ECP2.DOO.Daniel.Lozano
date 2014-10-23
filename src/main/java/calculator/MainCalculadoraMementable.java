@@ -1,18 +1,22 @@
 package calculator;
 
 import upm.jbb.IO;
-import java.util.TreeMap;
 
 public class MainCalculadoraMementable {
     private GestorComandos gestor;
+    
+    private GestorMementos<Memento> gestorMementos;
 
     public MainCalculadoraMementable() {
-        Calculadora calc = new Calculadora();
+        CalculadoraMementable calc = new CalculadoraMementable();
+        gestorMementos = new GestorMementos<Memento>();
         this.gestor = new GestorComandos();
         this.gestor.add(new ComandoSumar(calc));
         this.gestor.add(new ComandoRestar(calc));
         this.gestor.add(new ComandoIniciar(calc));
         this.gestor.add(new ComandoImprimir(calc));
+        this.gestor.add(new ComandoGuardar(calc, gestorMementos));
+        this.gestor.add(new ComandoDeshacer(calc, gestorMementos));
     }
 
     public void ejecutar() {
