@@ -38,4 +38,10 @@ public class Preparado extends Estado{
 		
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

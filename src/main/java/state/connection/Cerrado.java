@@ -4,13 +4,13 @@ public class Cerrado extends Estado{
 
 	@Override
 	public void abrir(Conexion conexion) {
-		// TODO Auto-generated method stub
+		conexion.setEstado(new Preparado());
 		
 	}
 
 	@Override
 	public void cerrar(Conexion conexion) {
-		// TODO Auto-generated method stub
+		new Cerrado();
 		
 	}
 
@@ -36,6 +36,11 @@ public class Cerrado extends Estado{
 	public void recibir(int respuesta, Link link, Conexion conexion) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public String toString() {
+		return "CERRADO";
 	}
 
 }
