@@ -13,7 +13,7 @@ public class Sumar extends Operacion {
 
 	@Override
 	public String toString() {
-		return "("+getExpresion1()+" + "+getExpresion2()+")";
+		return "("+getExpresion1()+"+"+getExpresion2()+")";
 	}
 
 }
