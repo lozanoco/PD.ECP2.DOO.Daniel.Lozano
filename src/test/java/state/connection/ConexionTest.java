@@ -19,13 +19,13 @@ public class ConexionTest {
 
     @Test
     public void testEstadoInicial() {
-        assertEquals(Estado.CERRADO, this.conexion.getEstado());
+        assertEquals(new Cerrado(), this.conexion.getEstado());
     }
 
     @Test
     public void testCerradoAbrir() {
         this.conexion.abrir();
-        assertEquals(Estado.PREPARADO, this.conexion.getEstado());
+        assertEquals(new Cerrado(), this.conexion.getEstado());
     }
 
     @Test

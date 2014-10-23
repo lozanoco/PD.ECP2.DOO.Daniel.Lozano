@@ -33,7 +33,7 @@ public class Parado extends Estado{
 	}
 
 	@Override
-	public void recibir(int respuesta, Conexion conexion) {
+	public void recibir(int respuesta, Link link, Conexion conexion) {
 		// TODO Auto-generated method stub
 		
 	}
